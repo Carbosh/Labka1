@@ -2,14 +2,16 @@
 //
 
 #include "stdafx.h"
+#include "resource.h"
 #include <iostream>
 #include <windows.h>
 #include <Mmsystem.h>
-#include "resource.h"
 #define PlaySound 
+
 using namespace std;
 int main()
 {
+	PlaySound(MAKEINTRESOURCE(IDR_WAVE1), NULL, SND_RESOURCE | SND_ASYNC);
 	setlocale(LC_ALL, "Russian");
 	cout << "1 Ëàìíîâ Îëåêñàíäð Îëåêñàíäðîâè÷\n";
 	cout << "2 11:02:1997\n";
@@ -34,7 +36,7 @@ int main()
 	cout << "__________ÌÓÇÈÊÀ\n";
 	//PlaySound("Sound.wav", NULL, SND_ASYNC);
 	//PlaySound("Sound.wav", NULL, SND_FILENAME | SND_ASYNC );
-	PlaySound(MAKEINTRESOURCE(IDR_WAVE1), NULL, SND_RESOURCE | SND_ASYNC);
+
 	cout << "__________ÌÓÇÈÊÀ\n";
 	system("pause");
 	return 0;
