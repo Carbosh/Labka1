@@ -3,8 +3,11 @@
 
 #include "stdafx.h"
 #include <iostream>
-using namespace std;
+#include <mmsystem.h>
 
+using namespace std;
+#pragma comment(lib, "winmm.lib")
+#define PlaySound;
 int main()
 {
 	cout << "1 Ламнов Олександр Олександрович";
@@ -27,6 +30,8 @@ int main()
 	cout << "18 Музика";
 	cout << "19 3-д моделювання";
 	cout << "20 Спорт";
+	PlaySound("Sound.wav", NULL, SND_FILENAME | SND_ASYNC);
+	system("pause");
     return 0;
 }
 
